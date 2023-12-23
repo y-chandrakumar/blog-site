@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <%- include("partials/header.ejs") %>
+    <div class="minheight">
+        <div class="container row mx-3 m-lg-5">
+    <form action="/construction" method="post">
+        <label for="username " class="col-6" ><b>UserName:</b>  <input type="text" name="username"  class="feedback-input" placeholder="Enter your name" maxlength="20" required></label>
+        <label for="username " class="col-6"><b>Mailid:</b>  <input type="text" name="Mailid" class="feedback-input"  placeholder="Enter your Mailid" required></label>
+        <label for="username" class="col-6"><b>create password</b>  <input type="password" id="password" class="feedback-input"  name="password1" placeholder="Create password" maxlength="10" required></label>
+        <label for="username" class="col-6" ><b>Re-enter password</b>  <input type="password" class="feedback-input" id="confirmPassword" maxlength="10" oninput="checkPassword()" name="password2" placeholder="Re-enter password" required></label>
+        <p id="error" style="color: red;" class="error"></p>
+
+        <br>
+        <input type="button" class="feedback-input col-5" value="verifyemail" placeholder="verify email"  onclick="window.location.href='/construction'">
+        <input type="submit" value="submit" class="feedback-input col-5"  >
+
+    </form>
+    </div></div>
+    <%- include("partials/footer.ejs") %>
+
+
+    <script>
+        function checkPassword() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var errorElement = document.getElementById("error");
+
+      if ( password === confirmPassword) {
+        errorElement.textContent = " Matched"; // Clear any previous error messages
+      } else {
+        errorElement.textContent = "Passwords do not match!";
+      }
+    }
+
+    function submitForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var errorElement = document.getElementById("error");
+
+      if (password === confirmPassword) {
+        alert("Passwords match!");
+        // Add your logic here to handle the matching passwords
+      } else {
+        errorElement.textContent = "Passwords do not match!";
+      }
+    }
+    </script>
+</body>
+
+
+
+
+</html>

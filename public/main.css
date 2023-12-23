@@ -1,0 +1,79 @@
+#profilelogo{
+    display: none;
+}
+
+.footer{
+    position:static  ;
+    bottom: 0vh;
+
+}
+
+
+
+  
+  .feedback-input {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #3586ff;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 80vw;
+    box-sizing: border-box;
+    outline: 0;
+  }
+    
+  .feedback-input:focus {
+    border: 2px solid #3586ff;
+  }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+  }
+  
+  [type="submit"] {
+    width: 80vw;
+    background: #3586ff;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+  }
+  [type="submit"]:hover {
+    background: #4860fa;
+  }
+
+  .wordwrap{
+    word-break: break-word; 
+    overflow-wrap: break-word;
+  }
+
+  .constructionimg{
+    
+    
+  
+    width: 50vw;
+    
+    position: absolute;
+    left: 20vw;
+    
+
+  }
+
+  .minheight{
+    min-height: 90vh;
+  }
+  
+
